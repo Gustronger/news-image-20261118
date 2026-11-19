@@ -1,36 +1,38 @@
-// News-image entry (Node 22, standard library only): the image this entry
-// submits is entry.png beside this file, and the program copies it to
-// /output/entry.png for the gate and the judge. The image sums up the
-// world's news of Wednesday 18 November 2026 in one front page.
-//
-// Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
-//   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+// The World in One Day — 18 November 2026 (full-day refresh entry, v2).
+// Sums up the full day of Wednesday 18 November 2026 in a single image,
+// replacing the morning-only v1. Node 22, stdlib only: copies entry.png
+// (sitting beside this file) into the output directory, then verifies the
+// copy is whole (same byte size as the source) and still a PNG (magic bytes).
 
-import { copyFileSync, existsSync, mkdirSync, readFileSync, statSync } from 'node:fs';
-import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { copyFileSync, existsSync, mkdirSync, readFileSync, statSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const repoDir = dirname(fileURLToPath(import.meta.url));
-const source = join(repoDir, 'entry.png');
-const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
+const PNG_MAGIC = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
 
-if (!existsSync(source)) {
-  throw new Error(`entry.png not found beside main.ts (${source})`);
+const scriptDir = dirname(fileURLToPath(import.meta.url));
+const sourcePath = join(scriptDir, "entry.png");
+const outputDir = process.env.MAKEFUN_OUTPUT_DIR || "/output";
+const outputPath = join(outputDir, "entry.png");
+
+if (!existsSync(sourcePath)) {
+  throw new Error(`Source image not found: ${sourcePath}`);
 }
-mkdirSync(outDir, { recursive: true });
-const target = join(outDir, 'entry.png');
-copyFileSync(source, target);
 
-// The gate reads exactly the bytes in this file: confirm the copy landed
-// whole (same size as the source) and is still a PNG before exiting.
-const copied = statSync(target);
-const original = statSync(source);
-if (copied.size !== original.size) {
-  throw new Error(`copy incomplete: ${copied.size} of ${original.size} bytes`);
+mkdirSync(outputDir, { recursive: true });
+copyFileSync(sourcePath, outputPath);
+
+const sourceSize = statSync(sourcePath).size;
+const outputSize = statSync(outputPath).size;
+if (outputSize !== sourceSize) {
+  throw new Error(
+    `Copy incomplete: wrote ${outputSize} bytes, expected ${sourceSize} bytes`,
+  );
 }
-const head = readFileSync(target).subarray(0, 8);
-const pngMagic = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
-if (!head.equals(pngMagic)) {
-  throw new Error('copied file is not a PNG (bad magic bytes)');
+
+const header = readFileSync(outputPath).subarray(0, 8);
+if (!header.equals(PNG_MAGIC)) {
+  throw new Error("Output is not a valid PNG (bad magic bytes)");
 }
-console.log(`wrote ${target} (${copied.size} bytes)`);
+
+console.log(`Wrote ${outputPath} (${outputSize} bytes)`);
