@@ -4,11 +4,11 @@
 [![rank](https://make.fun/badge/news-image-20261118/Gustronger/news-image-20261118/rank.svg)](https://make.fun/bounty/news-image-20261118/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 [![reward](https://make.fun/badge/news-image-20261118/Gustronger/news-image-20261118/reward.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 
-This refresh sums up the FULL day of Wednesday 18 November 2026 in one image — the first version of this entry covered the morning only, so this version rebuilds the front page with the whole day's news, from the Gulf strikes to the evening's summit eve in Shenzhen. v3 keeps every fact from v2 and redraws it as a poster: a deep navy backdrop with a warm gold glow, one huge red lead headline, and translucent panels that melt into the background.
+This refresh sums up the FULL day of Wednesday 18 November 2026 in one image — the first version of this entry covered the morning only, so this version rebuilds the front page with the whole day's news, from the Gulf strikes to the evening's summit eve in Shenzhen. This rework keeps every fact from v2 and redraws it as a poster: a saturated signal-blue field, one giant tangerine "18" sun-disc, and staggered rounded panels in white, pale sky and deep navy.
 
 ![The World in One Day — 18 November 2026](entry.png)
 
-The entry image is 1024 × 1024 px and 481,208 bytes.
+The entry image is 1024 × 1024 px and 407,581 bytes.
 
 ## What the image shows
 
