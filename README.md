@@ -4,11 +4,11 @@
 [![rank](https://make.fun/badge/news-image-20261118/Gustronger/news-image-20261118/rank.svg)](https://make.fun/bounty/news-image-20261118/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 [![reward](https://make.fun/badge/news-image-20261118/Gustronger/news-image-20261118/reward.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 
-This refresh sums up the FULL day of Wednesday 18 November 2026 in one image — the first version of this entry covered the morning only, so this version rebuilds the front page with the whole day's news, from the Gulf strikes to the evening's summit eve in Shenzhen.
+This refresh sums up the FULL day of Wednesday 18 November 2026 in one image — the first version of this entry covered the morning only, so this version rebuilds the front page with the whole day's news, from the Gulf strikes to the evening's summit eve in Shenzhen. v3 keeps every fact from v2 and redraws it as a poster: a deep navy backdrop with a warm gold glow, one huge red lead headline, and translucent panels that melt into the background.
 
 ![The World in One Day — 18 November 2026](entry.png)
 
-The entry image is 1024 × 1024 px and 224,453 bytes.
+The entry image is 1024 × 1024 px and 481,208 bytes.
 
 ## What the image shows
 
@@ -19,7 +19,7 @@ The entry image is 1024 × 1024 px and 224,453 bytes.
 5. **HEALTH:** U.S. loses measles elimination status after 26 years (5,400+ cases, 10 deaths); Ebola in DR Congo 11,000+ cases, 5,400 deaths, nearly 3 in 4 infected children under 5 do not survive (Bunia and Beni epicentres).
 6. **NVIDIA'S RECORD QUARTER:** record $115.8B quarter, first report since Jensen Huang's exit; board rejected Huang's offer to return as CEO.
 
-Siberia military plane crash kills all 19 on board; 8,000+ bomb threats across Europe within a month; Cambridge Dictionary Word of the Year: "Human".
+Siberia military plane crash kills all 19 on board; 8,000+ bomb threats across Europe within a month; Cambridge Dictionary Word of the Year: "Human". Markets: CAC 40 −1.62%, DAX −2.08% on a risk-off day.
 
 ## How to run
 

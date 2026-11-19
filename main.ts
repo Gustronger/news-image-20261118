@@ -1,8 +1,12 @@
-// The World in One Day — 18 November 2026 (full-day refresh entry, v2).
-// Sums up the full day of Wednesday 18 November 2026 in a single image,
-// replacing the morning-only v1. Node 22, stdlib only: copies entry.png
-// (sitting beside this file) into the output directory, then verifies the
-// copy is whole (same byte size as the source) and still a PNG (magic bytes).
+// The World in One Day — 18 November 2026 (v3, poster edition).
+// Same full-day news as v2, redrawn as a dramatic poster: deep navy
+// backdrop with a warm gold glow, one huge red lead headline, and
+// translucent panels that melt into the background instead of sitting
+// in rigid white boxes. Text stays crisp and legible throughout.
+//
+// Node 22, stdlib only. The program copies entry.png (which lives
+// next to this file) into the output directory and then checks the
+// copy: same byte size as the source, and a real PNG (magic bytes).
 
 import { copyFileSync, existsSync, mkdirSync, readFileSync, statSync } from "node:fs";
 import { dirname, join } from "node:path";
